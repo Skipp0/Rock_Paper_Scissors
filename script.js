@@ -1,11 +1,7 @@
 
-function computer_choice() {
-return Math.floor(Math.random() * 3);
-}
-
-let comp_choice = computer_choice();
-
 function assigner() {
+
+    let comp_choice = Math.floor(Math.random() * 3);
     if (comp_choice === 0) {
         var comp_hand = 'Rock';
     }
@@ -15,19 +11,16 @@ function assigner() {
     else {
         comp_hand ='Scissors';
     }
+    console.log('function assigner() return value = ', comp_hand)
     return comp_hand.toLowerCase();
-    }
-
-
-
-
-
+    };
 
 function play_round() {
 
     let sign = prompt('Enter your choice');
     user_choice = sign.toLowerCase();
     var comp_hand = assigner();
+    console.log('comp_hand = ', comp_hand);
 
     if (user_choice === comp_hand) {
         alert('DRAW')
@@ -70,7 +63,6 @@ function game() {
         play_round()
     
     }
-
 }
 
 game()
